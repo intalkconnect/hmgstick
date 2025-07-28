@@ -6,12 +6,12 @@ export default function App() {
   const [form, setForm] = useState({ username: '', password: '', plano: 'teste' });
 
   useEffect(() => {
-    axios.get('http://localhost:8000/games').then(res => setGames(res.data));
+    axios.get('https://mensageria-testegame.uz3cuu.easypanel.host/games').then(res => setGames(res.data));
   }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('http://localhost:8000/users', form);
+    await axios.post('https://mensageria-testegame.uz3cuu.easypanel.host/users', form);
     alert('Usuário criado com sucesso');
   };
 
